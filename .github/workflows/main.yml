@@ -23,11 +23,34 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
+      
+      - name: Set up Python and run script
+        uses: actions/setup-python@v2
+        run: python .github/src/get_weather.py
+      
+      - name: Run notebook
+        uses: yaananth/run-notebook@v1
+        env:
+          RUNNER: ${{ toJson(runner) }}
+          SECRETS: ${{ toJson(secrets) }}
+          GITHUB: ${{ toJson(github) }}
+        with:
+          notebook: ".github/src/vis_weather.ipynb"
+#           params: "PATHTOPARAMS.json"
+          isReport: False
+          poll: True
+      - uses: actions/upload-artifact@master
+        if: always()
+        with:
+          name: output
+          path: ${{ RUNNER.temp }}/nb-runner
+        env:
+          RUNNER: ${{ toJson(runner) }}
 
-      - name: Run the batch script
-        run: |
-          chmod +x "${GITHUB_WORKSPACE}/.github/run.sh"
-          .github/run.sh
+#       - name: Run the script
+#         run: |
+#           chmod +x "${GITHUB_WORKSPACE}/.github/run.sh"
+#           .github/run.sh
         
       - name: Commit files
         run: |
