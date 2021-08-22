@@ -17,7 +17,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
@@ -25,8 +25,9 @@ jobs:
           fetch-depth: 0
 
       - name: Run the batch script
-        shell: cmd
-        run: .github/run.bat
+        run: |
+          chmod +x "${GITHUB_WORKSPACE}/.github/run.sh"
+          .github/run.sh
         
       - name: Commit files
         run: |
