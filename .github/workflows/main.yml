@@ -28,7 +28,7 @@ jobs:
         uses: actions/setup-python@v2
         
       - name: Run the python script
-        run: python .github/src/get_weather.py
+        run: python ./src/get_weather.py
       
       - name: Run notebook
         uses: yaananth/run-notebook@v1
@@ -37,7 +37,7 @@ jobs:
           SECRETS: ${{ toJson(secrets) }}
           GITHUB: ${{ toJson(github) }}
         with:
-          notebook: ".github/src/vis_weather.ipynb"
+          notebook: "./src/vis_weather.ipynb"
 #           params: "PATHTOPARAMS.json"
           isReport: False
           poll: True
