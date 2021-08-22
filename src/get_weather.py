@@ -1,9 +1,10 @@
-import json, requests, yaml, logging
+import json, requests, yaml
+# import logging
 from datetime import datetime
 from dateutil import tz
 
-logging.basicConfig(level=logging.INFO)
-logging.info('Start to work!')
+# logging.basicConfig(level=logging.INFO)
+# logging.info('Start to work!')
 
 CONFIG_PATH = "./config/config.yaml"
 
@@ -25,7 +26,7 @@ api_call = TEMPLATE.format(
 
 # Call the api
 r = requests.get(api_call)
-logging.info('I have successfully made the API call.')
+# logging.info('I have successfully made the API call.')
 
 # Save the response and the timestamp of it
 if r.status_code == 200:
@@ -38,6 +39,7 @@ if r.status_code == 200:
         f.write(str(ts))
     with open(f'data/data_{ts}.json', 'w') as f:
         json.dump(r.json(), f)
-    logging.info(f"I have saved the API response at {dt}.")
+    # logging.info(f"I have saved the API response at {dt}.")
 else:
-    logging.error(f'The status code is {r.status_code}.')
+    pass
+    # logging.error(f'The status code is {r.status_code}.')
