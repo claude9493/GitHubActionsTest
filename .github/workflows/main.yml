@@ -46,8 +46,9 @@ jobs:
         with:
           notebook: "./src/vis_weather.ipynb"
 #           params: "PATHTOPARAMS.json"
-          isReport: False
-          poll: True
+#           isReport: False
+#           poll: True
+
       - uses: actions/upload-artifact@master
         if: always()
         with:
