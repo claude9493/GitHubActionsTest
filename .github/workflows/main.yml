@@ -45,7 +45,7 @@ jobs:
           GITHUB: ${{ toJson(github) }}
         with:
           notebook: "./src/vis_weather.ipynb"
-#           params: "PATHTOPARAMS.json"
+          params: "PATHTOPARAMS.json"
 #           isReport: False
 #           poll: True
 
