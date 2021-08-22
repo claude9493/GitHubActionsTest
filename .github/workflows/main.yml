@@ -24,8 +24,10 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
       
-      - name: Set up Python and run script
+      - name: Set up Python
         uses: actions/setup-python@v2
+        
+      - name: Run the python script
         run: python .github/src/get_weather.py
       
       - name: Run notebook
