@@ -34,7 +34,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests 
           pip install pyyaml 
-#          pip install json 
+          pip install dateutil
         
       - name: Run the python script
         run: python ./src/get_weather.py
