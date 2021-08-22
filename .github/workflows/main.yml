@@ -25,6 +25,7 @@ jobs:
           fetch-depth: 0
 
       - name: Run the batch script
+        shell: cmd
         run: .github/run.bat
         
       - name: Commit files
