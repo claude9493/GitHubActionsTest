@@ -1,0 +1,14 @@
+city: Hong Kong
+coordinates: 
+  latitude: '22.336365'
+  longitude: '114.265465'
+
+# Localization
+date_format: 'Jan 2, 2006'
+time_format: '3:04 PM'
+
+weather:
+  provider: openweather
+  api_key: b1a08fd6f712aa7851d7b41304561d77
+  units: metric
+  exclude: ['minutely']
