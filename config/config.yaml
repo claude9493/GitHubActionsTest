@@ -4,7 +4,7 @@ coordinates:
   longitude: '114.265465'
 
 # Localization
-time_zone: HK #Asia/Shanghai
+time_zone: Asia/Shanghai
 dt_format: "%Y-%m-%d %H:%M:%S"
 # date_format: 'Jan 2, 2006'
 # time_format: '3:04 PM'
