@@ -4,8 +4,10 @@ coordinates:
   longitude: '114.265465'
 
 # Localization
-date_format: 'Jan 2, 2006'
-time_format: '3:04 PM'
+time_zone: HK #Asia/Shanghai
+dt_format: "%Y-%m-%d %H:%M:%S"
+# date_format: 'Jan 2, 2006'
+# time_format: '3:04 PM'
 
 weather:
   provider: openweather
