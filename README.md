@@ -15,3 +15,5 @@ The workflow `CI` has following steps:
   - Actually, the notebook is executed first, then a new notebook is generated and replaces the old one. After that, the html output is exported.
 - Move previous weather information json file into the `historical` folder.
 - Commit and push all above changes to repository.
+
+The workflow is called every 30 minutes. See [this link](https://crontab.guru/every-1-hour) to see more about the [cron job](https://en.wikipedia.org/wiki/Cron).
