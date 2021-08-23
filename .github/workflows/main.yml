@@ -35,7 +35,7 @@ jobs:
           pip install requests pyyaml python-dateutil matplotlib seaborn
           pip install jupyter nbconvert altair 
         
-      - name: Run the python script
+      - name: Run the get weather script
         run: python ./src/get_weather.py
       
       - name: Execute notebook
@@ -44,7 +44,10 @@ jobs:
         run: |
           jupyter nbconvert --to notebook --execute ./src/vis_weather.ipynb --inplace
           jupyter nbconvert --to html --TemplateExporter.exclude_input=True --no-prompt ./src/vis_weather.ipynb --output-dir='./' --output='index.html' 
-      
+        
+      - name: Run the clear cache script
+        run: python ./src/clear_cache.py
+        
 #       - uses: actions/upload-artifact@master
 #         if: always()
 #         with:
