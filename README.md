@@ -5,6 +5,7 @@ https://claude9493.com/GitHubActionsTest/
 With GitHub Actions, this repository could regularly request weather information from [OpenWeather](https://openweathermap.org/) API, and do some simple analyze. The focus point is the usage of GitHub Actions.
 
 ## GitHub Actions
+
 The workflow `CI` has following steps:
 - Open a Ubuntu environment.
 - Pull the repository into the environment.
@@ -17,3 +18,10 @@ The workflow `CI` has following steps:
 - Commit and push all above changes to repository.
 
 The workflow is called every 30 minutes. See [this link](https://crontab.guru/every-1-hour) to learn more about the [cron job](https://en.wikipedia.org/wiki/Cron).
+
+## Anywhere else we can use GitHub Actions
+
+- Regularly data scraping
+- Static page auto-generate and depoly (hugo), see [claude9493/homepage](https://github.com/claude9493/homepage)
+- Freely use the GitHub server?
+- ......
